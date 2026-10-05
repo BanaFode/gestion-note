@@ -1,10 +1,21 @@
-import assert from 'node:assert/strict';
+.import assert from 'node:assert/strict';
 import test from 'node:test';
 import { isAllowedClientOrigin } from './clientOrigin.js';
 
 test('allows the configured client origin in any environment', () => {
    assert.equal(
       isAllowedClientOrigin('https://school.example', 'https://school.example', 'production'),
+      true
+   );
+});
+
+test('allows the deployed Vercel client origin in production', () => {
+   assert.equal(
+      isAllowedClientOrigin(
+         'https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app',
+         'https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app',
+         'production'
+      ),
       true
    );
 });

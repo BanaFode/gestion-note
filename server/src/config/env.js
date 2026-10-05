@@ -21,7 +21,9 @@ export const env = {
 
    jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
 
-   clientUrl: process.env.CLIENT_URL || 'http://localhost:5173',
+   clientUrl:
+      process.env.CLIENT_URL ||
+      'https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app',
 
    resendApiKey: process.env.RESEND_API_KEY || '',
 

@@ -1,5 +1,18 @@
 # Serveur Gestion des Notes
 
+## Déploiement Railway avec le client Vercel
+
+Configurez ces variables dans Railway :
+
+```env
+NODE_ENV=production
+CLIENT_URL=https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app
+```
+
+Le serveur utilise cette URL Vercel par défaut en l’absence de `CLIENT_URL`.
+Pour les prévisualisations Vercel, configurez leur URL exacte dans `CLIENT_URL`.
+L’URL publique de l’API est `https://gestion-note-backend-production.up.railway.app`.
+
 ## Premier démarrage
 
 1. Copiez `.env.example` vers `.env`, puis configurez MongoDB et un secret JWT aléatoire.
