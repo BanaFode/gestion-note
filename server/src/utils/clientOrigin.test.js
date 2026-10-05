@@ -9,17 +9,6 @@ test('allows the configured client origin in any environment', () => {
    );
 });
 
-test('allows the deployed Vercel client origin in production', () => {
-   assert.equal(
-      isAllowedClientOrigin(
-         'https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app',
-         'https://gestion-note-e8kc7iwg4-banafode24-6170.vercel.app',
-         'production'
-      ),
-      true
-   );
-});
-
 test('allows Vite localhost fallback ports in development', () => {
    assert.equal(
       isAllowedClientOrigin('http://localhost:5175', 'http://localhost:5173'),

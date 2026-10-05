@@ -29,10 +29,6 @@ En développement, l’API accepte les ports locaux Vite de `5173` à `5199`.
 Pour une autre origine ou en production, configurez `CLIENT_URL` dans le
 `.env` du serveur.
 
-Pour le déploiement Vercel indiqué, définissez `VITE_API_URL` dans les variables
-d’environnement Vercel à `https://gestion-note-backend-production.up.railway.app/api`.
-Cette adresse est aussi utilisée par défaut pour un build de production.
-
 ## Vérifications
 
 - `npm run lint` : analyse ESLint du client.
